@@ -13,7 +13,7 @@ function EventListeners() {
 // calculate Volume
 
 function vclick() {
-    var x = document.querySelector('#x__header').value 
+    var x = document.querySelector('#x__header').value
     var y = document.querySelector('#y__header').value
     var z = document.querySelector('#z__header').value
 
@@ -37,16 +37,17 @@ const dateOptions = {
     day: "numeric"
 }
 
-function showDate(){
-    var faDate = date.toLocaleDateString("fa-IR" , dateOptions)
+function showDate() {
+    var faDate = date.toLocaleDateString("fa-IR", dateOptions)
     document.querySelector('#header__datefy').textContent = faDate
 }
 
 
+let darkToggle = document.querySelector('#darkToggle');
 
-
-
-
+darkToggle.addEventListener('change', ()=> {
+  document.body.classList.toggle('dark');
+})
 
 
 
